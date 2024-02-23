@@ -1,0 +1,39 @@
+@import '../../style/config';
+form {
+	display: flex;
+	flex-direction: column;
+	gap: 58px;
+}
+
+legend,
+.label {
+	color: $neutral-dark-grayish-cyan;
+}
+
+legend {
+	margin-bottom: 16px;
+}
+
+.input {
+	&-bill {
+		background-image: url('images/icon-dollar.svg');
+	}
+	&-person {
+		background-image: url('images/icon-person.svg');
+	}
+
+	background-position: 20px center;
+	background-repeat: no-repeat;
+	margin-top: 16px;
+}
+
+input:focus {
+	outline: $focus-outline;
+}
+
+fieldset {
+	border: none;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 16px;
+}
