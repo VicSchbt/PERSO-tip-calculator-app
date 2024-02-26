@@ -33,12 +33,24 @@
 	.tip-calculator {
 		width: 100%;
 		background-color: $white;
-		border-top-left-radius: 25px;
-		border-top-right-radius: 25px;
+		border-top-left-radius: 24px;
+		border-top-right-radius: 24px;
 		padding: 32px;
 		flex-grow: 2;
 		display: flex;
 		flex-direction: column;
 		gap: 32px;
+	}
+
+	@media screen and (min-width: $gt-mobile) {
+		.tip-calculator {
+			width: 70%;
+			max-width: 920px;
+			flex-grow: 1;
+			border-radius: 24px;
+			-webkit-box-shadow: 0px 32px 43px 0px rgba(79, 166, 175, 0.2);
+			box-shadow: 0px 32px 43px 0px rgba(79, 166, 175, 0.2);
+			flex-direction: row;
+		}
 	}
 </style>

@@ -6,7 +6,7 @@
 <div class="tip-selector">
 	<input id={`tip-${tipValue}`} type="radio" bind:group value={tipValue} />
 	<label for={`tip-${tipValue}`}>
-		{`${tipValue} %`}
+		{`${tipValue}%`}
 	</label>
 </div>
 

@@ -52,3 +52,12 @@ fieldset {
 	right: 0;
 	color: $light-red;
 }
+
+@media screen and (min-width: $gt-mobile) {
+	fieldset {
+		grid-template-columns: repeat(3, 1fr);
+	}
+	form {
+		width: 50%;
+	}
+}

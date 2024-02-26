@@ -44,4 +44,14 @@
 		flex-direction: column;
 		align-items: center;
 	}
+
+	@media screen and (min-width: $gt-mobile) {
+		main {
+			height: auto;
+			position: relative;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -60%);
+		}
+	}
 </style>

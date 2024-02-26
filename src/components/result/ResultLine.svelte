@@ -37,4 +37,10 @@
 			letter-spacing: -0.67px;
 		}
 	}
+
+	@media screen and (min-width: $gt-mobile) {
+		.line__value {
+			font-size: 48px;
+		}
+	}
 </style>

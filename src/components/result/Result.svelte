@@ -7,20 +7,27 @@
 </script>
 
 <div class="result">
-	<ResultLine label="Tip Amount" value={tip} />
-	<ResultLine label="Total" value={total} />
+	<div class="lines">
+		<ResultLine label="Tip Amount" value={tip} />
+		<ResultLine label="Total" value={total} />
+	</div>
 	<button class:disabled={btnDisabled}>Reset</button>
 </div>
 
 <style lang="scss">
 	@import '../../style/config';
+
+	.result,
+	.lines {
+		display: flex;
+		flex-direction: column;
+		gap: 24px;
+	}
 	.result {
 		background-color: $neutral-very-dark-cyan;
 		padding: 24px;
 		border-radius: 16px;
-		display: flex;
-		flex-direction: column;
-		gap: 24px;
+		justify-content: space-between;
 	}
 	button {
 		color: $neutral-very-dark-cyan;
@@ -38,5 +45,12 @@
 
 	.disabled {
 		background-color: #0d686d;
+	}
+
+	@media screen and (min-width: $gt-mobile) {
+		.result {
+			width: 50%;
+			padding: 32px;
+		}
 	}
 </style>
