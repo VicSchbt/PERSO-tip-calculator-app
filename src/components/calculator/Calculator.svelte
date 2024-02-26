@@ -6,6 +6,8 @@
 	let bill;
 	let personNumber;
 	let tip;
+
+	$: invalidPeopleNumber = personNumber === 0;
 </script>
 
 <form>
@@ -23,7 +25,16 @@
 	</fieldset>
 	<label class="label">
 		Number of People
-		<input type="number" placeholder="0" bind:value={personNumber} class="input input-person" />
+		{#if invalidPeopleNumber}
+			<span class="error-message">Can't be zero</span>
+		{/if}
+		<input
+			type="number"
+			placeholder="0"
+			bind:value={personNumber}
+			class="input input-person"
+			class:error={invalidPeopleNumber}
+		/>
 	</label>
 </form>
 

@@ -16,6 +16,7 @@
 		font-family: 'Space Mono', monospace;
 		font-weight: 700;
 		font-style: normal;
+		cursor: pointer;
 	}
 
 	:global(input[type='text']),

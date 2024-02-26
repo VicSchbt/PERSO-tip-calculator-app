@@ -10,9 +10,12 @@ $neutral-light-grayish-cyan: #c5e4e7;
 $neutral-very-light-grayish-cyan: #f3f9fa;
 $white: #fff;
 
+$light-red: #e17457;
+
 $form-input-font-size: 24px;
 $input-border-radius: 4px;
 
 $focus-outline: 2px solid $primary-strong-cyan;
+$error-outline: 2px solid $light-red;
 
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');

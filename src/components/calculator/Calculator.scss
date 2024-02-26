@@ -37,3 +37,18 @@ fieldset {
 	grid-template-columns: repeat(2, 1fr);
 	gap: 16px;
 }
+
+.error,
+.error:focus {
+	outline: $error-outline;
+}
+
+.label {
+	position: relative;
+}
+
+.error-message {
+	position: absolute;
+	right: 0;
+	color: $light-red;
+}
