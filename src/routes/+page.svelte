@@ -36,5 +36,8 @@
 		border-top-right-radius: 25px;
 		padding: 32px;
 		flex-grow: 2;
+		display: flex;
+		flex-direction: column;
+		gap: 32px;
 	}
 </style>
