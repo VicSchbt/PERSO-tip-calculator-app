@@ -1,10 +1,22 @@
 <script>
+	import { createEventDispatcher } from 'svelte';
+
 	export let group;
 	export let tipValue;
+
+	const dispatch = createEventDispatcher();
+
+	const handleTipSelection = () => dispatch('handleTipSelection');
 </script>
 
 <div class="tip-selector">
-	<input id={`tip-${tipValue}`} type="radio" bind:group value={tipValue} />
+	<input
+		id={`tip-${tipValue}`}
+		type="radio"
+		bind:group
+		value={tipValue}
+		on:change={handleTipSelection}
+	/>
 	<label for={`tip-${tipValue}`}>
 		{`${tipValue}%`}
 	</label>

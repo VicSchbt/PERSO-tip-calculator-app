@@ -1,17 +1,24 @@
 <script>
+	import { tip, bill, personNumber, tipAmount, total, resetBtnDisabled } from '../../store/store';
 	import ResultLine from './ResultLine.svelte';
 
-	export let tip = 4.27;
-	export let total = 32.79;
-	export let btnDisabled = true;
+	const resetValues = () => {
+		tip.set(null);
+		bill.set(null);
+		personNumber.set(null);
+	};
 </script>
 
 <div class="result">
 	<div class="lines">
-		<ResultLine label="Tip Amount" value={tip} />
-		<ResultLine label="Total" value={total} />
+		<ResultLine label="Tip Amount" value={$tipAmount} />
+		<ResultLine label="Total" value={$total} />
 	</div>
-	<button class:disabled={btnDisabled}>Reset</button>
+	<button
+		class:disabled={$resetBtnDisabled}
+		disabled={$resetBtnDisabled}
+		on:click|preventDefault={resetValues}>Reset</button
+	>
 </div>
 
 <style lang="scss">
