@@ -46,7 +46,12 @@
 		padding: 8px;
 		cursor: pointer;
 		&:hover {
-			background-color: $primary-active-cyan;
+			&:enabled {
+				background-color: $primary-active-cyan;
+			}
+			&:disabled {
+				cursor: default;
+			}
 		}
 	}
 
