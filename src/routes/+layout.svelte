@@ -1,3 +1,8 @@
+<script>
+	export const trailingSlash = 'always';
+	export const prerender = true;
+</script>
+
 <svelte:head>
 	<title>Frontend Mentor | Tip calculator app</title>
 </svelte:head>
